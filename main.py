@@ -10,5 +10,4 @@ def send_command(x):
 def py_random():
     return random.random()
 
-
 eel.start('index.html')
