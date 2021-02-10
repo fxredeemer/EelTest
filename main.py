@@ -9,8 +9,8 @@ def send_command(x):
     try:
         application.go()
         eel.update_state(application.state) 
-    except:
-        eel.update_state("state machine error") 
+    except Exception as e:
+        eel.update_state("state machine error\r\n" + str(e)) 
 
 @eel.expose
 def py_random():

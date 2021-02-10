@@ -5,7 +5,7 @@ class Application(object):
     states : List[str] = ["Starting", "Running", "Closing", "Aborted"]
 
     state : str
-
+    
     def __init__(self) -> None:
         self.machine = Machine(model=self, states=Application.states, initial="Starting")
 
