@@ -48,6 +48,11 @@
             });
     }
 
+    eel.expose(update_state);
+    function update_state(result) {
+        document.getElementById("response").innerHTML = result;
+    }
+
 </script>
 
 </html>
