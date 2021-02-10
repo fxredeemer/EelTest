@@ -3,6 +3,7 @@
 
 <head>
     <link href="bulma.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
 </head>
 
 <body>
@@ -17,12 +18,12 @@
 
             <div class="columns">
                 <div class="column">
-                    <a class="button is-primary" id="functionButton">
+                    <a class="button is-primary" id="functionButton" onclick="sendCommand();">
                         Function
                     </a>
                 </div>
                 <div class="column">
-                    <a class="button is-primary" id="requestButton">
+                    <a class="button is-primary" id="requestButton" onclick="Random();">
                         Request
                     </a>
                 </div>
@@ -33,5 +34,20 @@
         </div>
     </section>
 </body>
+
+<script>
+    function sendCommand(x) {
+        eel.send_command("Javascript World!");
+    }
+
+    function Random(x) {
+        eel.py_random()
+            ((result) =>{
+                document.getElementById("response").innerHTML = result;
+                console.log(result);
+            });
+        }
+
+</script>
 
 </html>
