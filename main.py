@@ -21,4 +21,4 @@ application = Application()
 print(application.state)
 eel.update_state(application.state) 
 
-eel.start('index.html')
+eel.start('index.html', mode='edge')
